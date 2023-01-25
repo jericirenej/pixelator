@@ -1,0 +1,96 @@
+$corner-padding: 5px;
+$corner-padding-offset: 6px;
+$mobile-corner-padding: 9px;
+$mobile-corner-offset: 9px;
+
+.cropper {
+  position: absolute;
+  border: 2px solid var(--secondary-color);
+  user-select: none;
+  touch-action: none;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0deg 0% 0% / 80%);
+}
+
+.move {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  bottom: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  cursor: move;
+}
+
+.corner {
+  position: absolute;
+  padding: $corner-padding;
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+}
+
+.top {
+  top: -$corner-padding-offset;
+}
+
+.bottom {
+  bottom: -$corner-padding-offset;
+}
+
+.left {
+  left: -$corner-padding-offset;
+}
+
+.right {
+  right: -$corner-padding-offset;
+}
+
+@media (max-width: 576px) {
+  .corner {
+    padding: $mobile-corner-padding;
+  }
+
+  .top {
+    top: -$mobile-corner-offset;
+  }
+
+  .bottom {
+    bottom: -$mobile-corner-offset;
+  }
+
+  .left {
+    left: -$mobile-corner-offset;
+  }
+
+  .right {
+    right: -$mobile-corner-offset;
+  }
+}
+
+.top.right,
+.bottom.left {
+  cursor: nesw-resize;
+}
+
+.top.left,
+.bottom.right {
+  cursor: nwse-resize;
+}
+
+.horizontal {
+  top: 50%;
+  cursor: ew-resize;
+}
+
+.vertical {
+  left: 50%;
+  cursor: ns-resize;
+}

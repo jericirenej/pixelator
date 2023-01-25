@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.container {
+  position: relative;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  opacity: 0;
+  animation: appear 0.3s ease forwards;
+}
+
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 1rem;
+  background-color: var(--temp-color);
+  cursor: pointer;
+  opacity: 0;
+  animation: appear 0.3s ease forwards;
+
+  &.rounded {
+    border-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    color: var(--secondary-color);
+    content: "x";
+  }
+}
+
+.rounded {
+  border-radius: 12px;
+}
+
+.hide {
+  display: none;
+}

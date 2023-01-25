@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.options {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+}
+
+.base-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem;
+
+  &__upload-area {
+    margin-top: 2rem;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .base-container__upload-area {
+    margin-top: 4rem;
+  }
+
+  .options {
+    top: 1.1rem;
+  }
+}

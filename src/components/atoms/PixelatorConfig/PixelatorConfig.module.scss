@@ -1,0 +1,82 @@
+label {
+  display: inline-block;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0;
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+.input-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  &__value {
+    justify-self: left;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.select-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 45px;
+  gap: 1rem;
+  align-items: center;
+
+  &__label {
+    justify-self: right;
+  }
+
+  &__select {
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-family: var(--font-family);
+    text-align: center;
+    background: transparent;
+    border-color: var(--secondary-color-semi-transparent);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-inline: 3px;
+    padding-block: 2px;
+
+    &:focus {
+      border-color: var(--temp-color);
+    }
+  }
+
+  &__option {
+    color: initial;
+    font-family: var(--font-family);
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .select-wrapper {
+    grid-template-columns: 1fr 4fr;
+
+    &__label {
+      justify-self: left;
+    }
+
+    &__select {
+      justify-self: left;
+    }
+  }
+}
