@@ -7,7 +7,7 @@ interface BurgerMenuProps {
 export const BurgerMenu: Component<BurgerMenuProps> = p => {
   const bars = [0, 1, 2];
   return (
-    <div class={styles.burgerMenu} role="button">
+    <div class={styles.burgerMenu}>
       <Index each={bars}>
         {bar => (
           <span

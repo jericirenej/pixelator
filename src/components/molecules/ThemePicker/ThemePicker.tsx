@@ -50,6 +50,7 @@ export const ThemePicker: Component = () => {
         onClick={pickerToggle}
         role="button"
         title={tooltip()}
+        aria-label={tooltip()}
         classList={{
           [styles.menuIcon]: true,
           [styles.menuIcon__active]: pickerActive(),
